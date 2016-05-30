@@ -1,0 +1,7 @@
+##Interface:11200 
+##Title: Neatpurge
+##Notes: Purge addon for neat guild, very early version
+##OptionalDeps:
+##Dependencies: 
+neatpurge.lua
+
