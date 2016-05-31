@@ -8,7 +8,7 @@ function main()
 
 	for i=1,GetNumGuildMembers() do
 		yearsOffline, monthsOffline, daysOffline, hoursOffline = GetGuildRosterLastOnline(i);
-		name, rank = GetGuildRosterInfo(i);
+		player, rank = GetGuildRosterInfo(i);
 		pcall(purge)
 	end
 end
@@ -16,8 +16,8 @@ end
 function purge()
 	if (daysOffline > maxdayoffline-1 and rank == "Recruit") then
 		j=j+1
-		DEFAULT_CHAT_FRAME:AddMessage(name)
-		--GuildUninvite(name)
+		DEFAULT_CHAT_FRAME:AddMessage(player)
+		GuildUninviteByName(player)
 	end
 end
 
